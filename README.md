@@ -16,6 +16,8 @@ npm i --save @kanaries/vue-graphic-walker
 
 Step 2: use component in vue.
 
+### Use as component
+
 ```vue
 <script setup lang="ts">
 import { VueGraphicWalker } from '@kanaries/vue-graphic-walker';
@@ -24,7 +26,24 @@ import { VueGraphicWalker } from '@kanaries/vue-graphic-walker';
 <template>
   <VueGraphicWalker />
 </template>
+```
 
+### use as hook
+
+```vue
+<script setup lang="ts">
+import { useGraphicWalker } from './useGraphicWalker';
+import { onMounted, ref } from 'vue';
+const gw = ref<HTMLElement | null>(null);
+onMounted(() => {
+  const { render } = useGraphicWalker(gw)
+  render();
+})
+</script>
+
+<template>
+  <div ref="gw"></div>
+</template>
 ```
 
 ## Docs

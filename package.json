@@ -1,6 +1,6 @@
 {
   "name": "@kanaries/vue-graphic-walker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/brian-component-lib.umd.cjs",
@@ -29,5 +29,6 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
     "vue-tsc": "^1.4.2"
-  }
+  },
+  "license": "Apache-2.0"
 }

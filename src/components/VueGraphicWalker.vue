@@ -1,24 +1,34 @@
 <script setup lang="ts">
 import { embedGraphicWalker, IGWProps } from '@kanaries/graphic-walker';
-import { onMounted, ref } from 'vue'
+import { onBeforeUpdate, onMounted, ref } from 'vue'
 
 const props = defineProps<IGWProps>()
 
 const container = ref<HTMLElement | null>(null)
 
-onMounted(() => {
+function renderGW () {
     if (!container.value) {
         return
     }
-    embedGraphicWalker(container.value!, props);
+    embedGraphicWalker(container.value!, {
+        ...props,
+        keepAlive: props.keepAlive ?? true,
+        themeKey: props.themeKey ?? 'g2'
+    });
+}
+
+onMounted(() => {
+    renderGW()
+})
+
+onBeforeUpdate(() => {
+    renderGW()
 })
 
 </script>
 
 <template>
-  <div ref="container"></div>
+    <div ref="container"></div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

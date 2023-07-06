@@ -1,3 +1,3 @@
 import VueGraphicWalker from './components/VueGraphicWalker.vue';
-
-export { VueGraphicWalker }
+import { useGraphicWalker } from './useGraphicWalker'
+export { VueGraphicWalker, useGraphicWalker }
