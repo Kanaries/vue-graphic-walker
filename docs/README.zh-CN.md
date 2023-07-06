@@ -1,24 +1,24 @@
-# Vue Graphic Walker
+# Vue Graphic Walker: 一个可以帮你快速构建数据交互式数据可视化应用的Vue组件
 
 [English](https://github.com/Kanaries/vue-graphic-walker) | [简体中文](./docs/README.zh-CN.md)
 
 ![](https://img.shields.io/github/license/kanaries/vue-graphic-walker)
 ![](https://img.shields.io/npm/v/@kanaries/vue-graphic-walker)
 
-`@kanaries/vue-graphic-walker` is a Vue component that allows you to create a [graphic walker](https://github.com/Kanaries/graphic-walker) (a lite opensource tableau alternative).
+`@kanaries/vue-graphic-walker`是一个可以帮你快速构建数据交互式数据可视化应用的Vue组件，你可以将它作为一个tableau的轻量级开源替代。它是[graphic-walker](https://github.com/Kanaries/graphic-walker)的Vue版本。
 
 ![graphic-walker-banner](https://user-images.githubusercontent.com/22167673/222895294-47ddd664-106e-45ff-a613-e7919522cb79.png)
 
-## Usage
+## 使用
 
-Step 1: install package
+第一步：安转包
 ```bash
 npm i --save @kanaries/vue-graphic-walker
 ```
 
-Step 2: use component in vue.
+第二步：在Vue中使用
 
-### Use as component
+### 作为组件使用
 
 ```vue
 <script setup lang="ts">
@@ -30,7 +30,7 @@ import { VueGraphicWalker } from '@kanaries/vue-graphic-walker';
 </template>
 ```
 
-### Use as hook
+### 作为hook使用
 
 ```vue
 <script setup lang="ts">
@@ -48,8 +48,8 @@ onMounted(() => {
 </template>
 ```
 
-## Docs
-props of <VueGraphicWalker /> component is same as graphic-walker:
+## 文档
+<VueGraphicWalker /> 组件的参数与`graphic-walker`相同：
 
 ```ts
 export interface IGWProps {
