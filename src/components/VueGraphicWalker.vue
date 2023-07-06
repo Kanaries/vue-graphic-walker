@@ -10,10 +10,7 @@ onMounted(() => {
     if (!container.value) {
         return
     }
-    embedGraphicWalker(container.value!, {
-        ...props,
-        dark: "media"
-    });
+    embedGraphicWalker(container.value!, props);
 })
 
 </script>
